@@ -1,0 +1,60 @@
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 30px;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  position: absolute;
+  top: 0;
+  right: 0;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+.profileIcons {
+  display: flex;
+  gap: 15px;
+  color: #888;
+}
+
+.profileIcons svg {
+  cursor: pointer;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.profileName {
+  font-weight: bold;
+  color: #333;
+}
+
+.profileRole {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.profileInfo svg {
+  color: #888;
+  cursor: pointer;
+}

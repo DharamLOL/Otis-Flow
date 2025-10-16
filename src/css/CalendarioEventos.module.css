@@ -1,0 +1,171 @@
+.pageContainer {
+  display: flex;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex-grow: 1;
+  margin-left: 80px;
+  position: relative; 
+}
+
+.pageSpecificContent {
+  padding: 30px;
+  margin-top: 85px; 
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.createButton {
+  background-color: #1a237e; 
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mainEvents {
+  margin-bottom: 2rem;
+}
+
+.mainEvents h2 {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.progressBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.progressBar {
+  flex-grow: 1;
+  height: 15px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #673ab7; 
+  border-radius: 5px;
+}
+
+.eventColumns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.column {
+  flex: 1;
+  background-color: #303f9f; 
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.inProgress { background-color: #5c6bc0; }
+.onHold { background-color: #673ab7; }
+
+.columnHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.columnHeader h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.columnHeader span {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.eventCard {
+  background-color: #fce4ec;
+  color: #333;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.eventCard p {
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.cardDetails {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.priority {
+  font-weight: bold;
+}
+
+.baixa { color: #4caf50; }
+.media { color: #ff9800; } 
+.alta { color: #f44336; } 
+
+.cardProgress {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.progressFillSmall {
+  height: 100%;
+  background-color: #673ab7; 
+  border-radius: 4px;
+  position: absolute;
+}
+
+.cardProgress span {
+  position: absolute;
+  right: -10px;
+  top: -4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+body {
+  height: 100%;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.highlighted {
+  box-shadow: 0 0 0 4px #e91e63; 
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
