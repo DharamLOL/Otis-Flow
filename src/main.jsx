@@ -5,16 +5,29 @@ import CalendarioEventos from './pages/CalendarioEventos.jsx';
 import Contratos from './pages/Contratos.jsx';
 import './index.css'; 
 import { DataProvider } from './context/DataContext.jsx';
+import ProdutosServicos from './pages/ProdutoServicos.jsx';
+import ReportsDashboard from './pages/ReportsDashboard.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <CalendarioEventos />, 
   },
+
   {
     path: '/contratos',
     element: <Contratos />, 
   },
+
+ {
+    path: '/produtos',
+    element: <ProdutosServicos />, 
+ },
+
+ {
+    path: '/dashboard',
+    element: <ReportsDashboard />, 
+ }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
