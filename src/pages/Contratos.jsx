@@ -24,7 +24,7 @@ const Contratos = () => {
   const handleNavigateFromModal = () => {
     console.log("Tentando navegar...");
     if (newlyCreatedId) {
-      navigate('/', { state: { highlightedContractId: newlyCreatedId } });
+      navigate('/eventos', { state: { highlightedContractId: newlyCreatedId } });
       closeAndResetModal();
     }
   };

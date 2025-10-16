@@ -10,7 +10,7 @@ import ReportsDashboard from './pages/ReportsDashboard.jsx';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/eventos',
     element: <CalendarioEventos />, 
   },
 
@@ -20,12 +20,12 @@ const router = createBrowserRouter([
   },
 
  {
-    path: '/produtos',
+    path: '/',
     element: <ProdutosServicos />, 
  },
 
  {
-    path: '/dashboard',
+    path: '/dashboards',
     element: <ReportsDashboard />, 
  }
 ]);
