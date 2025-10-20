@@ -1,10 +1,8 @@
 import React from 'react';
-// 1. Import NavLink from react-router-dom
 import { NavLink } from 'react-router-dom';
 import styles from './Sidebar.module.css';
 
 const Sidebar = () => {
-  // Helper function to dynamically set the className
   const getNavLinkClass = ({ isActive }) => {
     return isActive ? `${styles.menuItem} ${styles.active}` : styles.menuItem;
   };
