@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import dayjs from "dayjs";
 import { useCache } from "../hooks/useCache";
 
-// ← Importa o módulo CSS (o arquivo será criado depois)
+// ← Importa o módulo CSS (o arquivo será criado/atualizado)
 import styles from "./Formulario.module.css";
 
 function Formulario() {
@@ -107,9 +107,10 @@ function Formulario() {
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Identificação</legend>
 
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="empresa">
               Nome da empresa:
               <input
+                id="empresa"
                 type="text"
                 value={empresa}
                 onChange={(e) => setEmpresa(e.target.value)}
@@ -118,11 +119,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="data">
               Data:
               <input
+                id="data"
                 type="date"
                 value={data}
                 onChange={(e) => setData(e.target.value)}
@@ -138,9 +138,10 @@ function Formulario() {
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Informações do Elevador</legend>
 
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="elevId">
               ID do Elevador:
               <input
+                id="elevId"
                 type="text"
                 value={elevId}
                 onChange={(e) => setElevId(e.target.value)}
@@ -149,11 +150,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="localizacao">
               Localização (Prédio/Andar):
               <input
+                id="localizacao"
                 type="text"
                 value={localizacao}
                 onChange={(e) => setLocalizacao(e.target.value)}
@@ -161,11 +161,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="fabricante">
               Fabricante:
               <input
+                id="fabricante"
                 type="text"
                 value={fabricante}
                 onChange={(e) => setFabricante(e.target.value)}
@@ -173,11 +172,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="modelo">
               Modelo:
               <input
+                id="modelo"
                 type="text"
                 value={modelo}
                 onChange={(e) => setModelo(e.target.value)}
@@ -185,11 +183,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="capacidade">
               Capacidade (kg/pessoas):
               <input
+                id="capacidade"
                 type="number"
                 min="0"
                 value={capacidade}
@@ -198,11 +195,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="ultimaManutencao">
               Data da última manutenção:
               <input
+                id="ultimaManutencao"
                 type="date"
                 value={ultimaManutencao}
                 onChange={(e) => setUltimaManutencao(e.target.value)}
@@ -217,9 +213,10 @@ function Formulario() {
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Métricas de Desempenho</legend>
 
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="viagensDia">
               Número de viagens por dia:
               <input
+                id="viagensDia"
                 type="number"
                 min="0"
                 value={viagensDia}
@@ -228,11 +225,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="tempoEspera">
               Tempo médio de espera no andar (segundos):
               <input
+                id="tempoEspera"
                 type="number"
                 min="0"
                 value={tempoEspera}
@@ -241,11 +237,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="tempoDesloc">
               Tempo médio de deslocamento (andar a andar):
               <input
+                id="tempoDesloc"
                 type="number"
                 min="0"
                 value={tempoDesloc}
@@ -261,9 +256,10 @@ function Formulario() {
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Métricas de Segurança</legend>
 
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="travamentosMes">
               Número de travamentos do mês:
               <input
+                id="travamentosMes"
                 type="number"
                 min="0"
                 value={travamentosMes}
@@ -272,11 +268,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="falhasPorta">
               Falhas de abertura/fechamento de porta:
               <input
+                id="falhasPorta"
                 type="number"
                 min="0"
                 value={falhasPorta}
@@ -284,8 +279,6 @@ function Formulario() {
                 className={styles.input}
               />
             </label>
-
-            <br />
 
             <span className={styles.label}>Ativação de freio de emergência:</span>
             <div className={styles.radioGroup}>
@@ -312,19 +305,17 @@ function Formulario() {
             </div>
 
             {freioEmergencia === "sim" && (
-              <>
-                <label className={styles.label}>
-                  Quantas vezes?
-                  <input
-                    type="number"
-                    min="0"
-                    value={qtdFreio}
-                    onChange={(e) => setQtdFreio(e.target.value)}
-                    className={styles.input}
-                  />
-                </label>
-                <br />
-              </>
+              <label className={styles.label} htmlFor="qtdFreio">
+                Quantas vezes?
+                <input
+                  id="qtdFreio"
+                  type="number"
+                  min="0"
+                  value={qtdFreio}
+                  onChange={(e) => setQtdFreio(e.target.value)}
+                  className={styles.input}
+                />
+              </label>
             )}
 
             <span className={styles.label}>Relatos de ruído anormal:</span>
@@ -352,18 +343,16 @@ function Formulario() {
             </div>
 
             {ruidoAnormal === "sim" && (
-              <>
-                <label className={styles.label}>
-                  Descrição:
-                  <textarea
-                    rows={2}
-                    value={descRuido}
-                    onChange={(e) => setDescRuido(e.target.value)}
-                    className={styles.textarea}
-                  />
-                </label>
-                <br />
-              </>
+              <label className={styles.label} htmlFor="descRuido">
+                Descrição:
+                <textarea
+                  id="descRuido"
+                  rows={2}
+                  value={descRuido}
+                  onChange={(e) => setDescRuido(e.target.value)}
+                  className={styles.textareaNoiseDesc}
+                />
+              </label>
             )}
 
             <span className={styles.label}>Botão de alarme funcionando?</span>
@@ -397,9 +386,10 @@ function Formulario() {
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Inspeção Técnica</legend>
 
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="cabosTracao">
               Estado dos cabos de tração:
               <select
+                id="cabosTracao"
                 value={cabosTracao}
                 onChange={(e) => setCabosTracao(e.target.value)}
                 className={styles.select}
@@ -410,11 +400,10 @@ function Formulario() {
               </select>
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="sistemaFreios">
               Sistema de freios:
               <select
+                id="sistemaFreios"
                 value={sistemaFreios}
                 onChange={(e) => setSistemaFreios(e.target.value)}
                 className={styles.select}
@@ -425,24 +414,23 @@ function Formulario() {
             </label>
 
             {sistemaFreios !== "ok" && (
-              <>
-                <label className={styles.label}>
-                  Observações:
-                  <textarea
-                    rows={2}
-                    value={obsFreios}
-                    onChange={(e) => setObsFreios(e.target.value)}
-                    className={styles.textarea}
-                  />
-                </label>
-                <br />
-              </>
+              <label className={styles.label} htmlFor="obsFreios">
+                Observações:
+                <textarea
+                  id="obsFreios"
+                  rows={2}
+                  value={obsFreios}
+                  onChange={(e) => setObsFreios(e.target.value)}
+                  className={styles.textareaBrakeObs}
+                />
+              </label>
             )}
 
             {/* ---- Campo movido para cá ---- */}
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="interfone">
               Sistema de comunicação (interfone):
               <input
+                id="interfone"
                 type="text"
                 value={interfone}
                 onChange={(e) => setInterfone(e.target.value)}
@@ -450,11 +438,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="iluminacao">
               Iluminação interna:
               <input
+                id="iluminacao"
                 type="text"
                 value={iluminacao}
                 onChange={(e) => setIluminacao(e.target.value)}
@@ -462,11 +449,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="ventilacao">
               Sistema de ventilação:
               <input
+                id="ventilacao"
                 type="text"
                 value={ventilacao}
                 onChange={(e) => setVentilacao(e.target.value)}
@@ -474,11 +460,10 @@ function Formulario() {
               />
             </label>
 
-            <br />
-
-            <label className={styles.label}>
+            <label className={styles.label} htmlFor="vibracao">
               Nível de vibração:
               <select
+                id="vibracao"
                 value={vibracao}
                 onChange={(e) => setVibracao(e.target.value)}
                 className={styles.select}
@@ -493,10 +478,7 @@ function Formulario() {
 
         {/* ==== Botão de envio ==== */}
         <div className={styles.actions}>
-          <button
-            type="submit"
-            className={styles.submitButton}
-          >
+          <button type="submit" className={styles.submitButton}>
             Salvar e ir ao Relatório
           </button>
         </div>
