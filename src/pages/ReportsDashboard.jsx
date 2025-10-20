@@ -5,6 +5,8 @@ import ProfileHeader from '../components/ProfileHeader';
 import SearchBar from '../components/SearchBar';
 import styles from '../css/ReportsDashboard.module.css';
 import { useState } from 'react';
+import { useCache } from '../hooks/useCache';
+import CreateReportModal from '../components/CreateReportModal';
 
 const ReportCard = ({ title, value, trend, trendColor, trendIconName }) => {
     return (
@@ -25,7 +27,9 @@ const ReportCard = ({ title, value, trend, trendColor, trendIconName }) => {
 };
 
 const ReportsDashboard = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('shopping');
+    const { addEntry } = useCache();
 
     const locationsData = {
         shopping: {
@@ -176,6 +180,24 @@ const ReportsDashboard = () => {
     };
 
     const currentLocation = locationsData[activeTab];
+    const handleSaveReport = (fullReportData) => {
+        const dataToSave = { ...fullReportData };
+        const empresa = dataToSave.empresa;
+        const dataISO = dataToSave.data;
+        delete dataToSave.empresa;
+        delete dataToSave.data;
+        const payload = dataToSave;
+
+        try {
+            addEntry(empresa.trim(), dataISO, payload);
+            
+            alert('Relatório salvo com sucesso no cache!');
+            setIsModalOpen(false); 
+        } catch (error) {
+            console.error('Houve um erro ao salvar o relatório:', error);
+            alert('Houve um erro ao salvar o relatório.');
+        }
+    };
 
     return (
         <div className={styles.dashboardContainer}>
@@ -203,6 +225,12 @@ const ReportsDashboard = () => {
                             onClick={() => setActiveTab('predio')}
                         >
                             PRÉDIO COMERCIAL
+                        </button>
+                        <button 
+                            className={styles.tab}
+                            onClick={() => setIsModalOpen(true)}
+                        >
+                            CRIAR RELATÓRIO
                         </button>
                     </div>
 
@@ -235,6 +263,12 @@ const ReportsDashboard = () => {
                     </div>
                 </div>
             </div>
+                {isModalOpen && (
+                    <CreateReportModal 
+                        onClose={() => setIsModalOpen(false)}
+                        onSave={handleSaveReport}
+                />
+            )}
         </div>
     );
 };

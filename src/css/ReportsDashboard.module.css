@@ -1,4 +1,4 @@
-/* Variáveis de cores */
+
 :root {
   --sidebar-bg: #0d1248;
   --header-bg: #ffffff;
@@ -22,7 +22,7 @@ body {
   min-height: 100vh;
 }
 
-/* --- Sidebar Styling --- */
+
 .sidebar {
   width: 80px;
   background-color: var(--sidebar-bg);
@@ -68,7 +68,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* --- Main Content Styling --- */
+
 .mainContent {
   flex-grow: 1;
   display: flex;

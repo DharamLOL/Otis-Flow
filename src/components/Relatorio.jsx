@@ -7,19 +7,19 @@ function Relatorio() {
   const { getEntries } = useCache();
   const navigate = useNavigate();
 
-  const [empresas, setEmpresas] = useState([]);          // nomes das empresas
-  const [empresaSel, setEmpresaSel] = useState("");      // empresa escolhida
-  const [datas, setDatas] = useState([]);                // datas disponíveis
-  const [dataSel, setDataSel] = useState("");            // data escolhida
-  const [registros, setRegistros] = useState([]);        // registros do dia escolhido
+  const [empresas, setEmpresas] = useState([]);          
+  const [empresaSel, setEmpresaSel] = useState("");      
+  const [datas, setDatas] = useState([]);                
+  const [dataSel, setDataSel] = useState("");            
+  const [registros, setRegistros] = useState([]);        
 
-  /* -------- Carrega todas as empresas na primeira renderização -------- */
+  
   useEffect(() => {
-    const tudo = getEntries();               // objeto completo
+    const tudo = getEntries();               
     setEmpresas(Object.keys(tudo));
   }, [getEntries]);
 
-  /* -------- Quando a empresa mudar, atualiza a lista de datas -------- */
+  
   useEffect(() => {
     if (!empresaSel) {
       setDatas([]);
@@ -29,13 +29,13 @@ function Relatorio() {
     }
 
     const porEmpresa = getEntries(empresaSel);
-    const listaDatas = Object.keys(porEmpresa).sort(); // ordem cronológica
+    const listaDatas = Object.keys(porEmpresa).sort(); 
     setDatas(listaDatas);
     setDataSel("");
     setRegistros([]);
   }, [empresaSel, getEntries]);
 
-  /* -------- Quando a data mudar, carrega os registros correspondentes -------- */
+ 
   useEffect(() => {
     if (empresaSel && dataSel) {
       const regs = getEntries(empresaSel, dataSel);

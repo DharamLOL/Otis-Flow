@@ -1,70 +1,47 @@
-/* -------------------------------------------------
-   IMPORTAR A FONTE POPPINS (Google Fonts)
-   ------------------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* -------------------------------------------------
-   Layout geral – contêiner que envolve todo o formulário
-   ------------------------------------------------- */
+
 .container {
   max-width: 800px;
   margin: auto;
   padding: 1.5rem;
-  /* Fonte Poppins aplicada a todo o conteúdo */
   font-family: 'Poppins', Arial, sans-serif;
-  color: #000;                     /* texto preto */
-
-  /* Fundo do contêiner → branco */
+  color: #000;                     
   background-color: #ffffff;
-  border: 1px solid #041E42;       /* borda externa (mantida) */
+  border: 1px solid #041E42;       
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* -------------------------------------------------
-   Título
-   ------------------------------------------------- */
 .title {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-/* -------------------------------------------------
-   Formulário interno
-   ------------------------------------------------- */
 .form {
   display: flex;
   flex-direction: column;
 }
 
-/* -------------------------------------------------
-   Cada bloco (section) – fundo cinza #D9D9D9 + borda #041E42
-   ------------------------------------------------- */
+
 .section {
   margin-bottom: 1rem;
-  border: 1px solid #041E42;          /* borda solicitada */
+  border: 1px solid #041E42;          
   border-radius: 6px;
-
-  /* Fundo interno cinza claro */
   background-color: #D9D9D9;
 
-  padding: 0.75rem;                  /* espaçamento interno */
+  padding: 0.75rem;                
 }
 
-/* -------------------------------------------------
-   Fieldset / legend (limpo)
-   ------------------------------------------------- */
 .fieldset {
-  border: none;                       /* a borda já está na .section */
+  border: none;                       
   padding: 0;
 }
 .legend {
   font-weight: bold;
 }
 
-/* -------------------------------------------------
-   Labels e inputs
-   ------------------------------------------------- */
 .label {
   display: block;
   margin-bottom: 0.5rem;
@@ -78,7 +55,7 @@
   box-sizing: border-box;
 }
 
-/* foco nos campos */
+
 .input:focus,
 .select:focus,
 .textarea:focus {
@@ -87,9 +64,7 @@
   box-shadow: 0 0 0 2px rgba(239, 50, 112, 0.2);
 }
 
-/* -------------------------------------------------
-   Textareas com tamanho fixo (sem redimensionamento)
-   ------------------------------------------------- */
+
 .textareaNoiseDesc,
 .textareaBrakeObs {
   width: 100%;
@@ -99,8 +74,7 @@
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
-  resize: none;                       /* impede redimensionamento */
-}
+  resize: none;                       
 
 /* -------------------------------------------------
    Radio groups
@@ -145,4 +119,4 @@
     width: 100%;
     text-align: center;
   }
-}
+}}
