@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+  --bg: #ffffff;
+  --primary: #041E42;
+  --accent: #EF3270;
+  --muted: #D9D9D9;
+  --text: #0b1220;
+  --card-border: rgba(4,30,66,0.08);
+  --shadow: 0 8px 24px rgba(4,30,66,0.08);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4,30,66,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.modal {
+  width: 92%;
+  max-width: 1080px;
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.close {
+  background: transparent;
+  border: 2px solid transparent;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.close:hover {
+  background: rgba(4,30,66,0.06);
+  transform: translateY(-1px);
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.chartBox {
+  background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chartBox h4 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.chartBox .chart-legend {
+  margin-top: 8px;
+}
+
+.chartBox:focus-within {
+  box-shadow: 0 0 0 4px rgba(239,50,112,0.08);
+  outline: none;
+}
+
+.chart-tooltip {
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+@media (max-width: 860px) {
+  .charts {
+    grid-template-columns: 1fr;
+  }
+  .modal {
+    padding: 14px;
+  }
+}
+
+.actionsRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.btn {
+  font-family: 'Poppins', Arial, sans-serif;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(239,50,112,0.12);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(4,30,66,0.06);
+}
+
+.modal, .header h3, .chartBox h4, .btn {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
