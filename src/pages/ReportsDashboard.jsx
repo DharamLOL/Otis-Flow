@@ -19,7 +19,7 @@ const ReportCard = ({ title, value, trend, trendColor, trendIconName }) => {
                 <div className={styles.cardValue}>{value}</div>
             </div>
             <div className={`${styles.cardTrend} ${styles[trendColor]}`}>
-                <span style={{marginRight: '5px'}}>{trendIconName}</span>
+                <span style={{ marginRight: '5px' }}>{trendIconName}</span>
                 {trend}
             </div>
         </div>
@@ -38,52 +38,52 @@ const ReportsDashboard = () => {
                 {
                     month: '04 / 25',
                     cards: [
-                        { 
-                            title: 'MÉDIA DIÁRIA DE PESSOAS', 
-                            value: '2.372', 
-                            trend: '25,32% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DIÁRIA DE PESSOAS',
+                            value: '2.372',
+                            trend: '25,32% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
-                        { 
-                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS', 
-                            value: '5.563', 
-                            trend: '23,52% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS',
+                            value: '5.563',
+                            trend: '23,52% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
-                        { 
-                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM', 
-                            value: '3', 
-                            trend: '0% desde o mês passado', 
-                            trendColor: 'trendNeutral', 
-                            trendIconName: '—' 
+                        {
+                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM',
+                            value: '3',
+                            trend: '0% desde o mês passado',
+                            trendColor: 'trendNeutral',
+                            trendIconName: '—'
                         },
                     ]
                 },
                 {
                     month: '03 / 25',
                     cards: [
-                        { 
-                            title: 'MÉDIA DIÁRIA DE PESSOAS', 
-                            value: '2.060', 
-                            trend: '6,29% desde o mês passado', 
-                            trendColor: 'trendNegative', 
-                            trendIconName: '▼' 
+                        {
+                            title: 'MÉDIA DIÁRIA DE PESSOAS',
+                            value: '2.060',
+                            trend: '6,29% desde o mês passado',
+                            trendColor: 'trendNegative',
+                            trendIconName: '▼'
                         },
-                        { 
-                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS', 
-                            value: '4.547', 
-                            trend: '13,72% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS',
+                            value: '4.547',
+                            trend: '13,72% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
-                        { 
-                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM', 
-                            value: '3', 
-                            trend: '50% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM',
+                            value: '3',
+                            trend: '50% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
                     ]
                 }
@@ -95,52 +95,52 @@ const ReportsDashboard = () => {
                 {
                     month: '04 / 25',
                     cards: [
-                        { 
-                            title: 'MÉDIA DIÁRIA DE PESSOAS', 
-                            value: '1.850', 
-                            trend: '18,75% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DIÁRIA DE PESSOAS',
+                            value: '1.850',
+                            trend: '18,75% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
-                        { 
-                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS', 
-                            value: '3.200', 
-                            trend: '15,42% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS',
+                            value: '3.200',
+                            trend: '15,42% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
-                        { 
-                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM', 
-                            value: '2', 
-                            trend: '0% desde o mês passado', 
-                            trendColor: 'trendNeutral', 
-                            trendIconName: '—' 
+                        {
+                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM',
+                            value: '2',
+                            trend: '0% desde o mês passado',
+                            trendColor: 'trendNeutral',
+                            trendIconName: '—'
                         },
                     ]
                 },
                 {
                     month: '03 / 25',
                     cards: [
-                        { 
-                            title: 'MÉDIA DIÁRIA DE PESSOAS', 
-                            value: '1.558', 
-                            trend: '5,12% desde o mês passado', 
-                            trendColor: 'trendNegative', 
-                            trendIconName: '▼' 
+                        {
+                            title: 'MÉDIA DIÁRIA DE PESSOAS',
+                            value: '1.558',
+                            trend: '5,12% desde o mês passado',
+                            trendColor: 'trendNegative',
+                            trendIconName: '▼'
                         },
-                        { 
-                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS', 
-                            value: '2.772', 
-                            trend: '10,25% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS',
+                            value: '2.772',
+                            trend: '10,25% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
-                        { 
-                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM', 
-                            value: '2', 
-                            trend: '33% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM',
+                            value: '2',
+                            trend: '33% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
                     ]
                 }
@@ -152,26 +152,26 @@ const ReportsDashboard = () => {
                 {
                     month: '04 / 25',
                     cards: [
-                        { 
-                            title: 'MÉDIA DIÁRIA DE PESSOAS', 
-                            value: '890', 
-                            trend: '12,45% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DIÁRIA DE PESSOAS',
+                            value: '890',
+                            trend: '12,45% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
-                        { 
-                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS', 
-                            value: '1.245', 
-                            trend: '8,76% desde o mês passado', 
-                            trendColor: 'trendPositive', 
-                            trendIconName: '▲' 
+                        {
+                            title: 'MÉDIA DE ACIONAMENTOS DIÁRIOS',
+                            value: '1.245',
+                            trend: '8,76% desde o mês passado',
+                            trendColor: 'trendPositive',
+                            trendIconName: '▲'
                         },
-                        { 
-                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM', 
-                            value: '4', 
-                            trend: '0% desde o mês passado', 
-                            trendColor: 'trendNeutral', 
-                            trendIconName: '—' 
+                        {
+                            title: 'MÉDIA DE PESSOAS SIMULTÂNEAS POR VIAGEM',
+                            value: '4',
+                            trend: '0% desde o mês passado',
+                            trendColor: 'trendNeutral',
+                            trendIconName: '—'
                         },
                     ]
                 }
@@ -190,9 +190,9 @@ const ReportsDashboard = () => {
 
         try {
             addEntry(empresa.trim(), dataISO, payload);
-            
+
             alert('Relatório salvo com sucesso no cache!');
-            setIsModalOpen(false); 
+            setIsModalOpen(false);
         } catch (error) {
             console.error('Houve um erro ao salvar o relatório:', error);
             alert('Houve um erro ao salvar o relatório.');
@@ -208,25 +208,28 @@ const ReportsDashboard = () => {
                     <h1 className={styles.reportsHeader}>Relatórios</h1>
 
                     <div className={styles.tabsContainer}>
-                        <button 
-                            className={`${styles.tab} ${activeTab === 'shopping' ? styles.activeTab : ''}`}
-                            onClick={() => setActiveTab('shopping')}
-                        >
-                            SHOPPING IGUATEMI
-                        </button>
-                        <button 
-                            className={`${styles.tab} ${activeTab === 'hospital' ? styles.activeTab : ''}`}
-                            onClick={() => setActiveTab('hospital')}
-                        >
-                            HOSPITAL SÃO PAULO
-                        </button>
-                        <button 
-                            className={`${styles.tab} ${activeTab === 'predio' ? styles.activeTab : ''}`}
-                            onClick={() => setActiveTab('predio')}
-                        >
-                            PRÉDIO COMERCIAL
-                        </button>
-                        <button 
+                        <div className={styles.locationTabs}>
+                            <button
+                                className={`${styles.tab} ${activeTab === 'shopping' ? styles.activeTab : ''}`}
+                                onClick={() => setActiveTab('shopping')}
+                            >
+                                SHOPPING IGUATEMI
+                            </button>
+                            <button
+                                className={`${styles.tab} ${activeTab === 'hospital' ? styles.activeTab : ''}`}
+                                onClick={() => setActiveTab('hospital')}
+                            >
+                                HOSPITAL SÃO PAULO
+                            </button>
+                            <button
+                                className={`${styles.tab} ${activeTab === 'predio' ? styles.activeTab : ''}`}
+                                onClick={() => setActiveTab('predio')}
+                            >
+                                PRÉDIO COMERCIAL
+                            </button>
+                        </div>
+
+                        <button
                             className={styles.tab}
                             onClick={() => setIsModalOpen(true)}
                         >
@@ -263,10 +266,10 @@ const ReportsDashboard = () => {
                     </div>
                 </div>
             </div>
-                {isModalOpen && (
-                    <CreateReportModal 
-                        onClose={() => setIsModalOpen(false)}
-                        onSave={handleSaveReport}
+            {isModalOpen && (
+                <CreateReportModal
+                    onClose={() => setIsModalOpen(false)}
+                    onSave={handleSaveReport}
                 />
             )}
         </div>

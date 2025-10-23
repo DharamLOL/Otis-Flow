@@ -41,19 +41,27 @@
   height: 48px;
   text-decoration: none; 
   color: inherit; 
+   border-radius: 100%;
 }
 
 .menuItem:hover {
   background-color: #5a60d6;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
 }
 
 .active {
   background-color: white;
   color: #04096D;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
 }
 
 .menuItem svg {
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
   stroke: currentColor;
 }

@@ -2,22 +2,25 @@
 
 import React, { useState } from 'react'; // <--- useState REINTRODUZIDO
 import styles from '../css/ProdutoServicos.module.css'; // Principal CSS
-import { IoMdStats } from 'react-icons/io'; 
+import { IoMdStats } from 'react-icons/io';
 import { MdDescription, MdEvent } from 'react-icons/md'; // Adicionado MdEvent para a lista de deadlines
 
 // IMPORTS DOS COMPONENTES ESTÁTICOS
-import Sidebar from '../components/Sidebar';         
-import ProfileHeader from '../components/ProfileHeader'; 
-import SearchBar from '../components/SearchBar';         
+import Sidebar from '../components/Sidebar';
+import ProfileHeader from '../components/ProfileHeader';
+import SearchBar from '../components/SearchBar';
 
+// img
+import profileImage from '../assets/amanda_silva.jpg';
+import buildImage from '../assets/build.png'
 // Mapeamento dos nomes dos meses (PODE FICAR FORA DO COMPONENTE)
 const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
 ];
 
 // Componente principal
 const ProdutosServicos = () => {
-    
+
     // --- VARIÁVEL NECESSÁRIA PARA O CALENDÁRIO ---
     const daysOfWeek = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
@@ -56,18 +59,18 @@ const ProdutosServicos = () => {
     // Funções de navegação do calendário
     const handlePrevMonth = () => {
         setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1, 1));
-        setSelectedDay(1); 
+        setSelectedDay(1);
     };
     const handleNextMonth = () => {
         setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1));
-        setSelectedDay(1); 
+        setSelectedDay(1);
     };
     const handleDayClick = (day) => {
         if (day !== null) {
             setSelectedDay(day);
         }
     };
-    
+
     // --- LÓGICA DO CALENDÁRIO ---
     const year = currentMonth.getFullYear();
     const month = currentMonth.getMonth();
@@ -81,27 +84,27 @@ const ProdutosServicos = () => {
     for (let i = 1; i <= daysInMonth; i++) {
         calendarDays.push(i); // Dias do mês
     }
-    
+
     // Deadlines para o dia selecionado
     const deadlinesForSelectedDay = allDeadlines.filter(dl => dl.day === selectedDay);
 
 
     // Dados para o Catálogo de Produtos (Personalizados)
     const productsData = [
-        { 
-            title: 'SkyRise - Elevador de Alto Tráfego', 
+        {
+            title: 'SkyRise - Elevador de Alto Tráfego',
             description: 'Tipo: Elevador comercial, de alto fluxo. Aplicação: Edifícios muito altos e movimentados. Capacidade: até 2000 kg ou 25 passageiros. Velocidade: até 5.0 m/s.',
         },
-        { 
-            title: 'Elevators Plus - Solução Moderna', 
+        {
+            title: 'Elevators Plus - Solução Moderna',
             description: 'Tipo: Elevador residencial e comercial leve. Aplicação: Edifícios de médio porte. Capacidade: até 1000 kg ou 13 passageiros. Velocidade: até 2.9 m/s. Certificações: ISO 9001.',
         },
-        { 
-            title: 'Elevators Premium - Luxo e Eficiência', 
+        {
+            title: 'Elevators Premium - Luxo e Eficiência',
             description: 'Tipo: Elevador de uso hospitalar e de luxo. Aplicação: Hospitais e hotéis de alto padrão. Características: Cabine silenciosa, portas mais largas e alta precisão de parada.',
         },
-        { 
-            title: 'Elevators Basic - Solução Econômica', 
+        {
+            title: 'Elevators Basic - Solução Econômica',
             description: 'Tipo: Elevador de serviço básico. Aplicação: Prédios mais antigos ou de baixo tráfego. Capacidade: até 500 kg ou 7 passageiros. Ideal para modernização.',
         },
     ];
@@ -109,13 +112,13 @@ const ProdutosServicos = () => {
 
     return (
         <div className={styles.container}>
-            
+
             <Sidebar />
-            
+
             <div className={styles.mainContent}>
-                
-                <ProfileHeader /> 
-                
+
+                <ProfileHeader />
+
                 <div className={styles.dashboardContainer}>
                     {/* TÍTULO DA PÁGINA: MAPA DE PROJETOS */}
                     <div className={styles.pageHeader}>
@@ -137,10 +140,10 @@ const ProdutosServicos = () => {
                     <div className={styles.dashboardGrid}>
                         {/* COLUNA ESQUERDA */}
                         <div className={styles.leftColumn}>
-                            
+
                             {/* Cards Instalação e Manutenção */}
                             <div className={styles.topCards}>
-                                
+
                                 {/* Card Instalação */}
                                 <div className={styles.card}>
                                     <div className={styles.cardHeader}>Instalação <IoMdStats style={{ color: '#e74c3c' }} /></div>
@@ -148,7 +151,7 @@ const ProdutosServicos = () => {
                                         {instalacaoData.map((item, index) => (
                                             <li key={index} className={styles.statusItem}>
                                                 <div className={styles.itemDetail}>
-                                                    <div className={styles.avatar} />
+                                                      <img src={profileImage} alt="Amanda Silva" className={styles.avatar} />
                                                     <span className={styles.itemName}>{item.name}</span>
                                                 </div>
                                                 <span className={`${styles.itemLabel} ${item.labelClass}`}>{item.status}</span>
@@ -156,7 +159,7 @@ const ProdutosServicos = () => {
                                         ))}
                                     </ul>
                                 </div>
-                                
+
                                 {/* Card Manutenção */}
                                 <div className={styles.card}>
                                     <div className={styles.cardHeader}>Manutenção <MdDescription style={{ color: '#3498db' }} /></div>
@@ -164,7 +167,7 @@ const ProdutosServicos = () => {
                                         {manutencaoData.map((item, index) => (
                                             <li key={index} className={styles.statusItem}>
                                                 <div className={styles.itemDetail}>
-                                                    <div className={styles.avatar} />
+                                                      <img src={profileImage} alt="Amanda Silva" className={styles.avatar} />
                                                     <span className={styles.itemName}>{item.name}</span>
                                                 </div>
                                                 <span className={`${styles.itemLabel} ${item.labelClass}`}>{item.status}</span>
@@ -173,14 +176,14 @@ const ProdutosServicos = () => {
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             {/* Card Catálogo de Produtos */}
                             <div className={`${styles.card} ${styles.productsCard}`}>
                                 <div className={styles.cardHeader}>Catálogo de produtos</div>
-                                
+
                                 {productsData.map((product, index) => (
                                     <div key={index} className={styles.productItem}>
-                                        <div className={styles.productImage} /> 
+                                        <img src={buildImage} alt="Amanda Silva" className={styles.profileImage} />
                                         <div className={styles.productContent}>
                                             <h3 className={styles.productTitle}>{product.title}</h3>
                                             <p className={styles.productDescription}>
@@ -202,7 +205,7 @@ const ProdutosServicos = () => {
                         <div className={styles.rightColumn}>
                             <div className={`${styles.card} ${styles.eventsCard}`}>
                                 <div className={styles.cardHeader}>Eventos</div>
-                                
+
                                 {/* Calendário Dinâmico */}
                                 <div className={styles.calendar}>
                                     <div className={styles.calendarHeader}>
@@ -216,10 +219,10 @@ const ProdutosServicos = () => {
                                         {calendarDays.map((day, index) => {
                                             const isDeadlineDay = allDeadlines.some(dl => dl.day === day);
                                             const isSelected = day === selectedDay;
-                                            
+
                                             return (
-                                                <div 
-                                                    key={index} 
+                                                <div
+                                                    key={index}
                                                     className={day === null ? styles.emptyCell : styles.dayCell}
                                                     onClick={() => handleDayClick(day)}
                                                 >
@@ -233,7 +236,7 @@ const ProdutosServicos = () => {
                                         })}
                                     </div>
                                 </div>
-                                
+
                                 <hr style={{ margin: '15px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
                                 {/* LISTA DE DEADLINES PARA O DIA SELECIONADO */}
