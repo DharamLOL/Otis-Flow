@@ -52,6 +52,7 @@ const CreateContractModal = ({
               value={shopping}
               onChange={(e) => setShopping(e.target.value)}
               placeholder="Ex: Iguatemi"
+              className={styles.input}
             />
           </div>
           <div className={styles.formGroup}>
@@ -62,6 +63,7 @@ const CreateContractModal = ({
               value={vigencia}
               onChange={(e) => setVigencia(e.target.value)}
               placeholder="Ex: 12/26"
+              className={styles.input}
             />
           </div>
           <div className={styles.formActions}>

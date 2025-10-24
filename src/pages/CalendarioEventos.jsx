@@ -27,9 +27,9 @@ const CalendarioEventos = () => {
         <SearchBar />
         <div className={styles.pageSpecificContent}>
           <header className={styles.header}>
-            <h1>Calendário de Eventos</h1>
+            <h1 className={styles.calendarTitle}>Calendário de Eventos</h1>
             <button className={styles.createButton} onClick={() => setIsModalOpen(true)}>
-              + criar evento
+              + Criar evento
             </button>
           </header>
 
@@ -37,11 +37,11 @@ const CalendarioEventos = () => {
             <h2>PRINCIPAIS EVENTOS</h2>
             {eventosPrincipais.map(evento => (
               <div key={evento.id} className={styles.progressBarContainer}>
-                <span>{evento.nome}</span>
+                <span className={styles.nome}>{evento.nome}</span>
                 <div className={styles.progressBar}>
                   <div className={styles.progressFill} style={{ width: `${evento.progresso}%` }}></div>
                 </div>
-                <span>{evento.progresso}%</span>
+                <span className={styles.progresso}>{evento.progresso}%</span>
               </div>
             ))}
           </section>

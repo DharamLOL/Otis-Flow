@@ -37,6 +37,10 @@
   font-weight: bold;
   color: #555;
 }
+.input{
+  background-color: rgba(219, 219, 219, 0.453);
+  color: black;
+}
 
 .formGroup input,
 .formGroup select {

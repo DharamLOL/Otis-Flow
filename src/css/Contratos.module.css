@@ -28,6 +28,7 @@
 .header h1 {
   font-size: 2rem;
   color: #333;
+  font-family: "Oswald", sans-serif;
 }
 
 .actions button {
@@ -70,6 +71,14 @@
   border: 1px solid #eee;
 }
 
+.cardVigentes h3 {
+ color: black;
+}
+
+.cardVigentes p{
+  color: black;
+}
+
 .cardPendentes {
   grid-column: 2 / 3;
   grid-row: 1 / 3; 
@@ -79,20 +88,26 @@
   flex-direction: column;
 }
 
+.cardPendentes h3 {
+  color: black;
+}
+
 .cardExpirados {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  background-color: #673ab7; 
+  background-color: #e8385ed6; 
   color: white;
 }
 
 .cardVigentes h3, .cardPendentes h3, .cardExpirados h3 {
   margin-top: 0;
   padding-bottom: 1rem;
+  color: black;
   border-bottom: 1px solid #eee;
 }
 
 .cardExpirados h3 {
+  color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 

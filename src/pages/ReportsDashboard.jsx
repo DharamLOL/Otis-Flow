@@ -220,24 +220,28 @@ const ReportsDashboard = () => {
                     <h1 className={styles.reportsHeader}>Relatórios</h1>
 
                     <div className={styles.tabsContainer}>
-                        <button
-                            className={`${styles.tab} ${activeTab === 'shopping' ? styles.activeTab : ''}`}
-                            onClick={() => setActiveTab('shopping')}
-                        >
-                            SHOPPING IGUATEMI
-                        </button>
-                        <button
-                            className={`${styles.tab} ${activeTab === 'hospital' ? styles.activeTab : ''}`}
-                            onClick={() => setActiveTab('hospital')}
-                        >
-                            HOSPITAL SÃO PAULO
-                        </button>
-                        <button
-                            className={`${styles.tab} ${activeTab === 'predio' ? styles.activeTab : ''}`}
-                            onClick={() => setActiveTab('predio')}
-                        >
-                            PRÉDIO COMERCIAL
-                        </button>
+                        <div className={styles.locationTabs}>
+                            <button
+                                className={`${styles.tab} ${activeTab === 'shopping' ? styles.activeTab : ''}`}
+                                onClick={() => setActiveTab('shopping')}
+                            >
+                                SHOPPING IGUATEMI
+                            </button>
+                            <button
+                                className={`${styles.tab} ${activeTab === 'hospital' ? styles.activeTab : ''}`}
+                                onClick={() => setActiveTab('hospital')}
+                            >
+                                HOSPITAL SÃO PAULO
+                            </button>
+                            <button
+                                className={`${styles.tab} ${activeTab === 'predio' ? styles.activeTab : ''}`}
+                                onClick={() => setActiveTab('predio')}
+                            >
+                                PRÉDIO COMERCIAL
+                            </button>
+                        </div>
+
+
                         <button
                             className={styles.tab}
                             onClick={() => setIsModalOpen(true)}

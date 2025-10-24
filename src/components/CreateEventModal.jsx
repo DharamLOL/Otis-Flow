@@ -37,6 +37,7 @@ const CreateEventModal = ({ onSave, onClose }) => {
               value={nome}
               onChange={(e) => setNome(e.target.value)}
               placeholder="Ex: Instalação de câmeras..."
+              className={styles.input}
             />
           </div>
 
@@ -46,6 +47,7 @@ const CreateEventModal = ({ onSave, onClose }) => {
               id="prioridade"
               value={prioridade}
               onChange={(e) => setPrioridade(e.target.value)}
+              className={styles.select}
             >
               <option value="BAIXA">Baixa</option>
               <option value="MÉDIA">Média</option>
@@ -59,6 +61,7 @@ const CreateEventModal = ({ onSave, onClose }) => {
               id="status"
               value={status}
               onChange={(e) => setStatus(e.target.value)}
+              className={styles.select}
             >
               <option value="pendentes">Pendente</option>
               <option value="emProgresso">Em Progresso</option>
